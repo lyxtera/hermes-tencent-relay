@@ -1,0 +1,6 @@
+name: hermes-tencent-relay
+manifest_version: 1
+version: 1.1.0
+kind: standalone
+description: Local HTTP relay so Hermes can reach your TencentDB Agent Memory Memory Core (direct or via optional Cloudflare Access).
+homepage: https://github.com/lyxtera/hermes-tencent-relay

@@ -1,0 +1,19 @@
+[Unit]
+Description=Hermes Tencent Relay — TencentDB Agent Memory proxy
+Documentation=https://github.com/lyxtera/hermes-tencent-relay
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/hermes-tencent-relay/server/relay.py
+Restart=on-failure
+RestartSec=5
+Environment=TENCENT_RELAY_LISTEN_HOST=127.0.0.1
+Environment=TENCENT_RELAY_LISTEN_PORT=8420
+Environment=TENCENT_RELAY_UPSTREAM_URL=
+Environment=TENCENT_RELAY_CF_CLIENT_ID=
+Environment=TENCENT_RELAY_CF_CLIENT_SECRET=
+
+[Install]
+WantedBy=multi-user.target

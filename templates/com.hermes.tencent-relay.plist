@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.hermes.tencent-relay</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/opt/hermes-tencent-relay/server/relay.py</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>TENCENT_RELAY_LISTEN_HOST</key>
+        <string>127.0.0.1</string>
+        <key>TENCENT_RELAY_LISTEN_PORT</key>
+        <string>8420</string>
+        <key>TENCENT_RELAY_UPSTREAM_URL</key>
+        <string></string>
+        <key>TENCENT_RELAY_CF_CLIENT_ID</key>
+        <string></string>
+        <key>TENCENT_RELAY_CF_CLIENT_SECRET</key>
+        <string></string>
+    </dict>
+    <key>KeepAlive</key>
+    <true/>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/tmp/hermes-tencent-relay.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/hermes-tencent-relay.log</string>
+</dict>
+</plist>
